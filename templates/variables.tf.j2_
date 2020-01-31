@@ -1,7 +1,9 @@
 variable "VCD_USER"{
+    type = "string"
     default = "{{ VCD_USER }}"
 }
 
+# Should be provided in TF_VAR_VCD_PASSWORD environment variable
 variable "VCD_PASSWORD" {
     default = "{{ VCD_PASSWORD }}"
 }
@@ -12,109 +14,135 @@ variable "VCD_MAX_RETRY_TIMEOUT" {
 }
 
 variable "VCD_ORG"{
+  type = "string"
   default = "{{ VCD_ORG }}"
 }
 
 variable "VCD_URL"{
+  type = "string"
   default ="https://dcloud.ru/api"
 }
 
 variable "VCD_VDC"{
+  type = "string"
   default =" {{ VCD_VDC }}"
 }
 
 variable "VCD_CATALOG_NAME" {
+    type = "string"
     default = " {{ VCD_CATALOG_NAME }}"
 }
 
 variable "VCD_TEMPLATE_VM" {
+    type = "string"
     default = "CentOS-7.6.1810-x86-64-10G"
 }
 
 variable "VAPP_NAME" {
+    type = "string"
     default = "{{ VAPP_NAME }}"
 }
 
 variable "ROOT_PW" {
+    type = "string"
     default = "{{ ROOT_PW }}"
 }
 
 variable "EDGE_GATEWAY_NAME" {
+    type = "string"
     default = "{{ EDGE_GATEWAY_NAME }}"
 }
 
 variable "EXTERNAL_NET_NAME" {
+    type = "string"
     default = "{{ EXTERNAL_NET_NAME }}"
 }
 
 variable "EXTERNAL_IP" {
+    type = "string"
     default = "{{ EXTERNAL_IP }}"
     description = "Public ip of edge gateway"
 }
 
 variable "INTERNAL_NET_NAME" {
     default = "Kubernetes"
+    type = "string"
 }
 
 variable "INTERNAL_SUBNET" {
+    type = "string"
     default = "10.10.20.0/24"
     description = "Cluster private subnet"
 }
 
 variable "INTERNAL_NET_GATEWAY_IP" {
+    type = "string"
     default = "10.10.20.1"
 }
 
 variable "INTERNAL_NET_NETMASK" {
+    type = "string"
     default = "255.255.255.0"
 }
 
 variable "INTERNAL_NET_STATIC_IP_POOL_START" {
+    type = "string"
     default = "10.10.20.4"
 }
 
 variable "INTERNAL_NET_STATIC_IP_POOL_END" {
+    type = "string"
     default = "10.10.20.127"
 }
 
 variable "INTERNAL_NET_DNS1" {
+    type = "string"
     default = "8.8.8.8"
 }
 
 variable "INTERNAL_NET_DNS2" {
+    type = "string"
     default = "8.8.4.4"
 }
 
 variable "K8S_API_FLOATING_ADDRESS" {
+    type = "string"
     default = "10.10.20.3"
 }
 
 variable "K8S_API_PORT_INTERNAL" {
+    type = "string"
     default = "6443"
 }
 
 variable "K8S_API_PORT_EXTERNAL" {
+    type = "string"
     default = "63443"
 }
 
 variable "FIRST_SSH_PORT_EXTERNAL" {
+    type = "string"
     default = "3202"
 }
 
 variable "STORAGE_POLICY_SSD" {
+  type = "string"
   default = "{{ STORAGE_POLICY_SSD }}"
 }
 
 variable "STORAGE_POLICY_NON_SSD" {
-  default = " {{ STORAGE_POLICY_NON_SSD }} "
+  type = "string"
+  default = "STORAGE_POLICY_NON_SSD"
 }
 
 variable "DISK_BUS_TYPE" {
   default = "SCSI"
+  type = "string"
 }
 
 variable "DISK_BUS_SUB_TYPE" {
   default = "VirtualSCSI"
+  type = "string"
 }
 
 variable "HOSTNAME_PREFIX" {
@@ -134,45 +162,57 @@ variable "FS_COUNT" {
 }
 
 variable "MASTER_RAM" {
+    type = "string"
     default = "4096"
 }
 
 variable "MASTER_CPU" {
+    type = "string"
     default = "4"
 }
 
 variable "DISK_MASTER_LOG_SIZE" {
+    type = "string"
     default = "10240"
 }
 
 variable "DISK_MASTER_ETCD_SIZE" {
+    type = "string"
     default = "10240"
 }
 
 variable "WORKER_RAM" {
+    type = "string"
     default = "6192"
 }
 
 variable "WORKER_CPU" {
+    type = "string"
     default = "4"
 }
 
 variable "DISK_WORKER_LOG_SIZE" {
+    type = "string"
     default = "10240"
 }
 
 variable "DISK_WORKER_CONTAINERS_SIZE" {
+    type = "string"
     default = "31200"
 }
 
+
 variable "FS_RAM" {
+    type = "string"
     default = "2048"
 }
 
 variable "FS_CPU" {
+    type = "string"
     default = "2"
 }
 
 variable "DISK_FS_DATA_SIZE" {
+    type = "string"
     default = "31200"
 }
