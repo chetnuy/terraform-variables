@@ -1,0 +1,4 @@
+---
+- name: Generate terraform variables
+  become: yes
+  template: src=templates/variables.tf.j2 dest=./variables.tf
