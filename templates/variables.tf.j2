@@ -20,11 +20,11 @@ variable "VCD_URL"{
 }
 
 variable "VCD_VDC"{
-  default =" {{ VCD_VDC }}"
+  default ="{{ VCD_VDC }}"
 }
 
 variable "VCD_CATALOG_NAME" {
-    default = " {{ VCD_CATALOG_NAME }}"
+    default = "{{ VCD_CATALOG_NAME }}"
 }
 
 variable "VCD_TEMPLATE_VM" {
@@ -106,7 +106,7 @@ variable "STORAGE_POLICY_SSD" {
 }
 
 variable "STORAGE_POLICY_NON_SSD" {
-  default = " {{ STORAGE_POLICY_NON_SSD }} "
+  default = "{{ STORAGE_POLICY_NON_SSD }}"
 }
 
 variable "DISK_BUS_TYPE" {
