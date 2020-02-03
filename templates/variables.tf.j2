@@ -28,7 +28,7 @@ variable "VCD_CATALOG_NAME" {
 }
 
 variable "VCD_TEMPLATE_VM" {
-    default = "CentOS-7.6.1810-x86-64-10G"
+    default = "{{ VCD_TEMPLATE_VM }}"
 }
 
 variable "VAPP_NAME" {
@@ -122,11 +122,11 @@ variable "HOSTNAME_PREFIX" {
 }
 
 variable "MASTER_COUNT" {
-  default = "3"
+  default = "{{ MASTER_COUNT }}"
 }
 
 variable "WORKER_COUNT" {
-  default = "2"
+  default = "{{ WORKER_COUNT }}"
 }
 
 variable "FS_COUNT" {
